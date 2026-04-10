@@ -62,7 +62,10 @@ const LanguageMenu = () => {
   };
 
   return (
-    <div ref={wrapRef} className="relative shrink-0 min-w-[10.5rem] sm:min-w-[11.5rem]">
+    <div
+      ref={wrapRef}
+      className="relative w-[9.5rem] shrink-0 sm:w-[11.75rem]"
+    >
       <button
         type="button"
         id="lang-menu-button"
@@ -70,10 +73,10 @@ const LanguageMenu = () => {
         aria-expanded={open}
         aria-label="Language"
         onClick={() => setOpen((o) => !o)}
-        className="flex h-10 w-full cursor-pointer items-center gap-0 rounded-full border-2 border-white/35 bg-white/95 py-0 pl-3 pr-3 text-left text-sm font-semibold text-orange-900 shadow-md shadow-orange-950/20 backdrop-blur-sm transition hover:border-white/60 hover:bg-white focus:border-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-300/90 focus:ring-offset-2 focus:ring-offset-orange-700"
+        className="box-border flex h-10 w-full max-w-full cursor-pointer items-center gap-1 rounded-full border-2 border-white/35 bg-white/95 px-2.5 py-0 text-left text-sm font-semibold leading-none text-orange-900 shadow-md shadow-orange-950/20 backdrop-blur-sm transition hover:border-white/60 hover:bg-white focus-visible:border-yellow-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300/90 sm:px-3"
       >
         <span className="pointer-events-none shrink-0 text-orange-600" aria-hidden>
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -81,12 +84,12 @@ const LanguageMenu = () => {
             />
           </svg>
         </span>
-        <span className="min-w-0 flex-1 truncate px-2 text-center sm:text-left">{current.label}</span>
+        <span className="min-w-0 flex-1 truncate text-left">{current.label}</span>
         <span
           className={`pointer-events-none shrink-0 text-orange-700 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
           aria-hidden
         >
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.25}>
+          <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.25}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </span>
@@ -96,7 +99,7 @@ const LanguageMenu = () => {
         <ul
           role="listbox"
           aria-labelledby="lang-menu-button"
-          className="absolute right-0 z-[200] mt-2 min-w-full overflow-hidden rounded-xl border-2 border-orange-200 bg-gradient-to-b from-white to-orange-50/90 py-1.5 shadow-xl shadow-orange-950/30 ring-1 ring-orange-900/10"
+          className="absolute right-0 z-[200] mt-2 box-border min-w-full w-max max-w-[calc(100vw-1rem)] overflow-hidden rounded-xl border-2 border-orange-200 bg-gradient-to-b from-white to-orange-50/90 py-1.5 shadow-xl shadow-orange-950/30 ring-1 ring-orange-900/10"
         >
           {LANGUAGES.map(({ code, label }) => {
             const selected = code === lang;
@@ -107,7 +110,7 @@ const LanguageMenu = () => {
                   role="option"
                   aria-selected={selected}
                   onClick={() => selectCode(code)}
-                  className={`flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm font-semibold transition-colors ${
+                  className={`flex w-full min-w-0 items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm font-semibold transition-colors ${
                     selected
                       ? 'bg-orange-600 text-white shadow-sm'
                       : 'text-orange-950 hover:bg-orange-100/90 active:bg-orange-200/80'
@@ -123,7 +126,7 @@ const LanguageMenu = () => {
                   >
                     {selected ? '✓' : ''}
                   </span>
-                  <span className="min-w-0 flex-1 truncate">{label}</span>
+                  <span className="min-w-0 flex-1 break-words text-left leading-snug">{label}</span>
                 </button>
               </li>
             );
@@ -146,10 +149,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-orange-700 text-white p-4 shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center gap-4">
-        <h1 className="text-2xl font-bold flex items-center gap-2 shrink-0">
-          <span className="text-yellow-400">🕉️</span> {m.brand}
+    <header className="bg-orange-700 text-white px-3 py-3 shadow-lg sm:px-4 sm:py-4 sticky top-0 z-50">
+      <div className="container mx-auto flex min-w-0 max-w-full items-center justify-between gap-2 sm:gap-4">
+        <h1 className="flex min-w-0 flex-1 items-center gap-1.5 pr-1 text-lg font-bold sm:flex-none sm:pr-0 sm:text-2xl sm:leading-tight">
+          <span className="shrink-0 text-yellow-400">🕉️</span>
+          <span className="min-w-0 truncate">{m.brand}</span>
         </h1>
         <nav className="hidden md:flex gap-8 font-medium flex-wrap justify-center">
           {nav.map(([key, href]) => (
@@ -162,7 +166,7 @@ const Header = () => {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <a
             href={SITE_PHONE_TEL}
             className="flex items-center justify-center min-w-10 h-10 sm:min-w-0 sm:h-auto sm:px-3 sm:py-2 rounded-md bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm tabular-nums transition-colors"

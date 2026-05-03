@@ -1,6 +1,9 @@
 /** Local photos in /public/gallery — hero = full home mandir / puja setup; grid = other ceremony photos (no duplicate of hero) */
 export const HERO_IMAGE_SRC = '/gallery/hero.png';
 
+/** PhonePe QR for guru dakshina — file in /public */
+export const GURU_DAKSHINA_QR_SRC = '/guru-dakshina-qr.png';
+
 export const GALLERY_IMAGE_SRCS = [
   '/gallery/gallery-01.png',
   '/gallery/gallery-02.png',

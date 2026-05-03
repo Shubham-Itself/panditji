@@ -8,7 +8,7 @@ export const LANGUAGES = [
 
 export const translations = {
   en: {
-    brand: 'Pandit Ji Seva',
+    brand: 'Pandit Sitaram Sharma',
     nav: {
       home: 'Home',
       about: 'About',
@@ -28,6 +28,7 @@ export const translations = {
     },
     about: {
       title: 'About Pandit Ji Seva',
+      panditName: 'Pandit Sitaram Sharma',
       experience: '23 years of experience',
       intro:
         'We are a dedicated team of Vedic scholars and experienced Pandits from Kashi and beyond, committed to performing rituals with scriptural accuracy, devotion, and clarity for your family.',
@@ -51,11 +52,27 @@ export const translations = {
       intro:
         'From marriage and sanskars to havan, katha, shraddha, and graha shanti—we tailor every ceremony to your gotra, language, and schedule.',
       book: 'Book or enquire',
+      prev: 'Previous',
+      next: 'Next',
+      pageStatus: 'Page {current} of {total}',
       items: serviceItemsForLang('en'),
     },
     gallery: {
       title: 'Moments of Devotion',
       alt: 'Rituals',
+      prev: 'Previous',
+      next: 'Next',
+      pageStatus: 'Page {current} of {total}',
+    },
+    guruDakshina: {
+      title: 'Guru Dakshina',
+      qrAlt: 'PhonePe QR code for guru dakshina',
+    },
+    welcome: {
+      title: 'Welcome',
+      greeting: 'Namaste — welcome to Pandit Sitaram Sharma',
+      body: 'We are glad you are here. For pujas, havans, and spiritual guidance, call us or open our location on Google Maps.',
+      close: 'Continue to site',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -114,7 +131,7 @@ export const translations = {
     },
   },
   hi: {
-    brand: 'पण्डित जी सेवा',
+    brand: 'पण्डित सीताराम शर्मा',
     nav: {
       home: 'मुख्य',
       about: 'परिचय',
@@ -134,6 +151,7 @@ export const translations = {
     },
     about: {
       title: 'पण्डित जी सेवा के बारे में',
+      panditName: 'पण्डित सीताराम शर्मा',
       experience: '२३ वर्षों का अनुभव',
       intro:
         'हम काशी और अन्यत्र के वैदिक विद्वानों व अनुभवी पण्डितों की एक समर्पित टीम हैं—शास्त्रीय शुद्धता, भक्ति और स्पष्टता के साथ आपके परिवार के लिए अनुष्ठान करने हेतु।',
@@ -157,11 +175,27 @@ export const translations = {
       intro:
         'विवाह व संस्कारों से लेकर हवन, कथा, श्राद्ध व ग्रह शांति तक—हम आपकी गोत्र, भाषा व समयानुसार विधि तैयार करते हैं।',
       book: 'बुक करें या पूछताछ',
+      prev: 'पिछला',
+      next: 'अगला',
+      pageStatus: 'पृष्ठ {current} / {total}',
       items: serviceItemsForLang('hi'),
     },
     gallery: {
       title: 'भक्ति के क्षण',
       alt: 'अनुष्ठान',
+      prev: 'पिछला',
+      next: 'अगला',
+      pageStatus: 'पृष्ठ {current} / {total}',
+    },
+    guruDakshina: {
+      title: 'गुरु दक्षिणा',
+      qrAlt: 'गुरु दक्षिणा हेतु फोनपे क्यूआर कोड',
+    },
+    welcome: {
+      title: 'स्वागत है',
+      greeting: 'नमस्ते — पण्डित सीताराम शर्मा जी की वेबसाइट पर आपका स्वागत है',
+      body: 'पूजा, हवन व आध्यात्मिक मार्गदर्शन हेतु हमसे जुड़ें। कॉल करें या गूगल मैप्स पर स्थान देखें।',
+      close: 'आगे बढ़ें',
     },
     faq: {
       title: 'अक्सर पूछे जाने वाले प्रश्न',
@@ -220,7 +254,7 @@ export const translations = {
     },
   },
   sa: {
-    brand: 'पण्डितजी-सेवा',
+    brand: 'पण्डितः सीताराम-शर्मा',
     nav: {
       home: 'गृहम्',
       about: 'विषये',
@@ -240,6 +274,7 @@ export const translations = {
     },
     about: {
       title: 'पण्डितजी-सेवायाः विषये',
+      panditName: 'पण्डितः सीताराम-शर्मा',
       experience: 'त्रयोविंशतेः वर्षाणाम् अनुभवः',
       intro:
         'वयं काश्यादिभ्यः वैदिक-विद्वद्भिः अनुभविभिः पण्डितैः च समर्पिताः—शास्त्रानुकूलतया भक्त्या स्पष्टतया च कुटुम्बाय अनुष्ठानानि कर्तुम्।',
@@ -263,11 +298,27 @@ export const translations = {
       intro:
         'विवाह-संस्कारेभ्यः हवन-कथा-श्राद्ध-ग्रहशान्त्यन्तम्—गोत्र-भाषा-कालानुसारं विधिः विधीयते।',
       book: 'आरक्षणं पृच्छा वा',
+      prev: 'पूर्वम्',
+      next: 'अग्रिमम्',
+      pageStatus: 'पृष्ठम् {current} / {total}',
       items: serviceItemsForLang('sa'),
     },
     gallery: {
       title: 'भक्ति-क्षणाः',
       alt: 'अनुष्ठानम्',
+      prev: 'पूर्वम्',
+      next: 'अग्रिमम्',
+      pageStatus: 'पृष्ठम् {current} / {total}',
+    },
+    guruDakshina: {
+      title: 'गुरु-दक्षिणा',
+      qrAlt: 'गुरु-दक्षिणायै फोनपे-क्यूआर-संकेतः',
+    },
+    welcome: {
+      title: 'स्वागतम्',
+      greeting: 'नमस्ते — पण्डितः सीताराम-शर्मा',
+      body: 'पूजा-हवन-मार्गदर्शनाय सम्पर्कं करोतु। दूरवाणीम् आह्वयतु वा गूगल-मानचित्रे स्थानं उद्घाट्य।',
+      close: 'जालपुटं अवलोकय',
     },
     faq: {
       title: 'बहुधा पृष्टाः प्रश्नाः',
